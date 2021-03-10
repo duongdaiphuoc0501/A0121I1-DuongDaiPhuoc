@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<button type="button" onclick="printFibo()">dsdasdsa</button>
+
+<script>
+    function fib(n) {
+        if (n === 1 || n === 2) return 1;
+        else return fib(n - 1) + fib(n - 2);
+    }
+    function printFibo(){
+        let a = prompt("Enter a number: ");
+        let fibo = 0;
+        for(let i = 1; i<a;i++){
+            fibo += fib(i) + ' ';
+        }
+        document.writeln(fibo);
+    }
+</script>
+</body>
+</html>

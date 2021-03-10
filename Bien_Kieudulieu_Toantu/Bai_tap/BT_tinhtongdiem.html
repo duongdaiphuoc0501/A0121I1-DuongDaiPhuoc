@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến, kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+<script>
+    let inputDiemVL;
+    let inputDiemHH;
+    let inputDiemSH;
+    inputDiemVL = prompt("Nhập điểm vật lý: ");
+    inputDiemHH = prompt("Nhập điểm hóa học: ");
+    inputDiemSH = prompt("Nhập điểm sinh học: ");
+    let DiemVL = parseFloat(inputDiemVL);
+    let DiemHH = parseFloat(inputDiemHH);
+    let DiemSH = parseFloat(inputDiemSH);
+    let total = DiemVL + DiemHH + DiemSH;
+    let average = total/3;
+    document.writeln("Tổng: "+ total);
+    document.writeln("Trung bình: "+ average);
+</script>
+</body>
+</html>

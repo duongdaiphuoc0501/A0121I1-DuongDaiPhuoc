@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<input type="number" id="nhap" name="nhap" >
+<button onclick="insnt()">Check</button>
+<script>
+    function checksnt(n) {
+        if (n < 2){return  false;}
+        else{
+            for (var i = 2; i <= Math.sqrt(n); i++)
+            {
+                if (n % i === 0){
+                    return  false;
+                }
+            }
+            return true;
+        }
+    }
+    function insnt() {
+        let a = document.getElementById('nhap').value;
+        let count = 0;
+        let N = 2;
+        while(N <= a){
+            if(checksnt(N)){
+                document.writeln(""+N);
+                count++;
+            }
+            N++;
+        }
+        document.writeln("<br>");
+        document.writeln(count);
+    }
+</script>
+</body>
+</html>

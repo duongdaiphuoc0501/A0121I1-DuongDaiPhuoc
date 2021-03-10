@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game puzzel</title>
+</head>
+<body>
+<div style="display: flex;">
+    <div id="a" style=" width: 250px;"><img src="image/Hinh 1a.png" onclick="changeImgA()" id="carA" width="250 px"
+                                            height="600 px"></div>
+    <img src="image/Hinh 2b.png" onclick="changeImgB()" id="carB" width="250 px" height="600 px">
+    <img src="image/Hinh 3c.png" onclick="changeImgB()" id="carC" width="250 px" height="600 px">
+    <img src="image/Hinh 1d.png" onclick="changeImgB()" id="carD" width="250 px" height="600 px">
+    <img src="image/Hinh 2e.png" onclick="changeImgB()" id="carE" width="250 px" height="600 px">
+</div>
+</body>
+<script>
+    let carA = document.getElementById("carA");
+    let carB = document.getElementById("carB");
+    let carC = document.getElementById("carC");
+    let carD = document.getElementById("carD");
+    let carE = document.getElementById("carE");
+
+    function changeImgA() {
+        // alert(carA.src)
+        if (carA.src == "http://localhost:63342/A0121I1-Duong_Dai_Phuoc/module1/Cautrucdieukien/Bai_tap/image/Hinh%201a.png") {
+            document.getElementById("carA").src = "image/Hinh 2a.png"
+        } else if (carA.src == "http://localhost:63342/A0121I1-Duong_Dai_Phuoc/module1/Cautrucdieukien/Bai_tap/image/Hinh%202a.png") {
+            document.getElementById("carA").src = "image/Hinh 3a.png"
+        } else {
+            document.getElementById("carA").src = "image/Hinh 1a.png"
+        }
+    }
+</script>
+</body>
+</html>

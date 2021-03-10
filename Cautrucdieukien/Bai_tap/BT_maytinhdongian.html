@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+</head>
+<body>
+
+<table>
+    <tr><td colspan="4"><input type="text" id="result"></td></tr>
+    <tr>
+        <td><input type="button" onclick="nhap('1')" value="1" /></td>
+        <td><input type="button" onclick="nhap('2')" value="2" /></td>
+        <td><input type="button" onclick="nhap('3')" value="3" /></td>
+        <td><input type="button" onclick="nhap('+')" value="+" /></td>
+    </tr>
+    <tr>
+        <td><input type="button" onclick="nhap('4')" value="4" /></td>
+        <td><input type="button" onclick="nhap('5')" value="5" /></td>
+        <td><input type="button" onclick="nhap('6')" value="6" /></td>
+        <td><input type="button" onclick="nhap('-')" value="-" /></td>
+    </tr>
+    <tr>
+        <td><input type="button" onclick="nhap('7')" value="7" /></td>
+        <td><input type="button" onclick="nhap('8')" value="8" /></td>
+        <td><input type="button" onclick="nhap('9')" value="9" /></td>
+        <td><input type="button" onclick="nhap('*')" value="x" /></td>
+    </tr>
+    <tr>
+        <td><input type="button" onclick="xoa()" value="C" /></td>
+        <td><input type="button" onclick="nhap('0')" value="0" /></td>
+        <td><input type="button" onclick="tinh()" value="=" /></td>
+        <td><input type="button" onclick="nhap('/')" value="/" /></td>
+    </tr>
+    <script>
+        function nhap(numbers) {
+            document.getElementById("result").value += numbers;
+        }
+        function tinh() {
+            document.getElementById("result").value = (eval(document.getElementById("result").value));
+        }
+        function xoa() {
+            document.getElementById("result").value = "";
+        }
+    </script>
+</table>
+</body>
+</html>

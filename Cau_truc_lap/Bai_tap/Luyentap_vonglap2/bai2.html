@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    function giaithua(n) {
+        if( n == 0 || n == 1 ) return 1;
+        else return n*giaithua(n-1);
+    }
+    let a = prompt("Enter a number");
+    document.writeln("Result: " + giaithua(a));
+</script>
+</body>
+</html>

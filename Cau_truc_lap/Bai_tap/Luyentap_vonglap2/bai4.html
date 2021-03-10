@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập chiều dài hình chữ nhật: ");
+    let b = prompt("Nhập chiều rộng hình chữ nhật: ");
+    let n = parseInt(a);
+    let m = parseInt(b);
+    for(let i = 1; i <= m; i++) {
+        for(let k = 1 ; k <= n; k++){
+            if(i == 1 || k == 1 || i == m || k == n){
+                document.writeln("*");
+            }
+            else{
+                document.writeln("&nbsp&nbsp");
+            }
+        }
+        document.writeln("<br>");
+    }
+</script>
+</body>
+</html>

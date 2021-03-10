@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Hiển thị đầu ra</title>
 </head>
 <body>
-$END$
+<button type="button" onclick="showMessagea();">Click Me1!</button>
+<script>
+    function showMessagea() {
+        alert('Xin chào!')
+    }
+</script>
+<div id="messageDiv"></div>
+<button type="button" onclick="showMessageb();">Click Me2!</button>
+<script>
+    function showMessageb() {
+        document.getElementById('messageDiv').innerHTML='Xin chào!';
+    }
+</script>
+<button type="button" onclick="showMessagec();">Click Me3!</button>
+<script>
+    function showMessagec(){
+        document.write('Xin chào!');
+    }
+</script>
+<button type="button" onclick="showMessaged();">Click Me4!</button>
+<script>
+    function showMessaged(){
+        console.log('Xin chào!');
+    }
+</script>
 </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = prompt("Nhập tam giác vuông có độ dài: ");
+    let n = parseInt(a);
+    for (var i = 1; i <= n; i++) {
+        for (var j = 1; j <= i; j++) {
+            document.writeln("* ");
+        }
+        document.writeln("<br>");
+    }
+    document.writeln("<br>");
+
+    for (var k = n; k >= 1; k--) {
+        for (var q = 1; q <= k; q++) {
+            document.writeln("* ");
+        }
+        document.writeln("<br>");
+    }
+    document.writeln("<br>");
+
+    for (let i = 1; i <= n; i++) {
+        for (var k = 1; k <= n - i; k++) {
+            document.writeln("&nbsp;&nbsp;");
+        }
+        for (var j = n - i + 1; j <= n; j++) {
+            document.writeln("*");
+        }
+        document.writeln("<br>");
+    }
+    document.writeln("<br>");
+
+    for (let i = n; i >= 1; i--) {
+        for (var k = n - i; k >= 1; k--) {
+            document.writeln("&nbsp;&nbsp;");
+        }
+        for (var j = n - i + 1; j <= n; j++) {
+            document.writeln("*");
+        }
+        document.writeln("<br>");
+    }
+</script>
+</body>
+</html>

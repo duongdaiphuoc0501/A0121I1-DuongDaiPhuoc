@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng chuyển đổi tiền tệ</title>
+</head>
+<body>
+<p>Amount <input type="number" name="Amount" id = "Amount" /></p>
+<p> From Currency
+    <select id = "FromCurrency">
+        <option value = "VND">-VND-</option>
+        <option value = "USD">USD</option>
+    </select>
+</p>
+<p> To Currency
+    <select id = "ToCurrency">
+        <option value = "USD">USD</option>
+        <option value = "VND">-VND-</option>
+    </select>
+</p>
+<button type="submit"  id = "Convert" onclick="Result()">Convert</button>
+
+<script>
+    function Result()
+    {
+        let money = Number(document.getElementById("Amount").value);
+        let FromCurrency = document.getElementById("FromCurrency").value;
+        let ToCurrency = document.getElementById("ToCurrency").value;
+        if (FromCurrency == "VND" && ToCurrency == "USD") {
+            document.writeln("Result : " + money / 23000 + "USD");
+        }
+        else {
+            if (FromCurrency == "USD" && ToCurrency == "VND") {
+                document.writeln("Result : " + money * 23000 + "VND");
+            }
+            else {
+                if (FromCurrency == "VND" && ToCurrency == "VND") {
+                    document.writeln("Result : " + money + "VND");
+                }
+                else {
+                    if (FromCurrency == "USD" && ToCurrency == "USD") {
+                        document.writeln("Result : " + money + "USD");
+                    }
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
+
